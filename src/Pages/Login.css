@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Playfair+Display:ital,wght@1,700&display=swap");
+
+.login-stage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 10%, #1b1b1b 0%, #000 58%);
+  padding: 1.5rem;
+}
+
+.phone-shell {
+  width: min(360px, 92vw);
+  min-height: 690px;
+  border-radius: 50px;
+  border: 3px solid #2f2a34;
+  background: linear-gradient(160deg, #f7f7f7 0%, #f2f2f2 100%);
+  box-shadow:
+    0 40px 95px rgba(0, 0, 0, 0.72),
+    0 0 0 2px #b8afc8;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.phone-shell::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 175px;
+  width: 4px;
+  height: 56px;
+  border-radius: 8px;
+  background: #2f2a34;
+  box-shadow: 0 72px 0 #2f2a34;
+}
+
+.phone-notch {
+  width: 92px;
+  height: 27px;
+  border-radius: 18px;
+  background: #070707;
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.phone-notch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 40%, #6d7fff, #24355c 75%);
+}
+
+.phone-content {
+  width: 100%;
+  padding: 6.7rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: #282828;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.brand {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.15rem;
+  line-height: 1.05;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.tagline {
+  margin: 0.7rem 0 0;
+  font-size: 1.06rem;
+  font-weight: 500;
+}
+
+.prompt {
+  margin: 0 0 2rem;
+  font-size: 1.95rem;
+  line-height: 1.24;
+  max-width: 12ch;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.field-wrap {
+  border: 2px solid #5c5b5e;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.45rem 0.95rem 0.55rem;
+  display: block;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #7e7e7e;
+  margin-bottom: 0.12rem;
+}
+
+.field-wrap input {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  color: #1f1f1f;
+  outline: none;
+}
+
+.field-wrap input::placeholder {
+  color: #8e8e8e;
+}
+
+.field-wrap:focus-within {
+  border-color: #443945;
+  box-shadow: 0 0 0 3px rgba(88, 68, 90, 0.18);
+}
+
+.login-button {
+  margin-top: auto;
+  border: 0;
+  border-radius: 11px;
+  min-height: 56px;
+  background: linear-gradient(180deg, #695667 0%, #52414f 100%);
+  color: #f7f4f6;
+  font-size: 1.58rem;
+  font-weight: 700;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(78, 60, 80, 0.24);
+  transition:
+    transform 0.15s ease,
+    filter 0.2s ease;
+}
+
+.login-button:hover {
+  filter: brightness(1.06);
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 420px) {
+  .phone-shell {
+    min-height: 640px;
+    border-radius: 44px;
+  }
+
+  .phone-content {
+    padding: 6.2rem 1.15rem 1.45rem;
+  }
+
+  .brand {
+    font-size: 1.9rem;
+  }
+
+  .prompt {
+    font-size: 1.7rem;
+  }
+
+  .login-button {
+    min-height: 52px;
+    font-size: 1.4rem;
+  }
+}
